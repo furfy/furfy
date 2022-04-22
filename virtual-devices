@@ -1,0 +1,32 @@
+#!/bin/bash
+
+pid=/tmp/virtual-devices.pid
+
+[[ -f $pid ]] && exit 1
+
+echo $$ > $pid
+
+generic=Основной
+virtual=Виртуальный
+output=alsa_output.pci-0000_01_00.1.hdmi-stereo
+
+gid=$(pactl load-module module-null-sink media.class=Audio/Duplex sink_name=$generic channel_map=front-left,front-right)
+vid=$(pactl load-module module-null-sink media.class=Audio/Duplex sink_name=$virtual channel_map=front-left,front-right)
+
+function terminate() {
+	rm -f $pid
+	pactl unload-module $gid
+	pactl unload-module $vid
+}
+
+trap terminate EXIT
+
+while [[ -f $pid ]]; do
+	pw-link $generic:capture_FL $output:playback_FL &> /dev/null
+	pw-link $generic:capture_FR $output:playback_FR &> /dev/null
+
+	pw-link $virtual:capture_FL $output:playback_FL &> /dev/null
+	pw-link $virtual:capture_FR $output:playback_FR &> /dev/null
+
+	sleep 1
+done

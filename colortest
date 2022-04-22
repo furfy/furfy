@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo -e "\e[0m"
+echo -e "\e[0;30mBLACK\t\e[1;30mLIGHT BLACK"
+echo -e "\e[0;31mRED\t\e[1;31mLIGHT RED"
+echo -e "\e[0;32mGREEN\t\e[1;32mLIGHT GREEN"
+echo -e "\e[0;33mYELLOW\t\e[1;33mLIGHT YELLOW"
+echo -e "\e[0;34mBLUE\t\e[1;34mLIGHT BLUE"
+echo -e "\e[0;35mMAGENTA\t\e[1;35mLIGHT MAGENTA"
+echo -e "\e[0;36mCYAN\t\e[1;36mLIGHT CYAN"
+echo -e "\e[0;37mWHITE\t\e[1;37mLIGHT WHITE"
+echo -e "\e[0m"
