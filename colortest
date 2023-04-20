@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo -e "\e[0m"
 echo -e "\e[0;30mBLACK\t\e[1;30mLIGHT BLACK"
