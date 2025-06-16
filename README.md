@@ -1,5 +1,3 @@
-[![](https://img.shields.io/endpoint?url=https://i.pluginhub.info/shields/rank/author/furfy)](https://runelite.net/plugin-hub)
-[![](https://img.shields.io/endpoint?url=https://i.pluginhub.info/shields/installs/author/furfy)](https://runelite.net/plugin-hub/furfy)
 [![](https://img.shields.io/discord/321345656184635402?label=Discord)](https://furfy.github.io/invite)
 [![](https://img.shields.io/github/stars/furfy?style=social)](../../..)
 
